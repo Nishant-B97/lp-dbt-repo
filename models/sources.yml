@@ -10,3 +10,7 @@ sources:
         identifier: raw_hosts
       - name: reviews
         identifier: raw_reviews
+      - name: customers
+        identifier: raw_customer
+      - name: sales
+        identifier: sales_us

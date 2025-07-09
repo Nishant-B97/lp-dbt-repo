@@ -1,0 +1,11 @@
+version: 2
+
+snapshots:
+  - name: snap3
+    relation: source('airbnb', 'customers')
+    config:
+      target_schema: snapshots
+      unique_key: 'Customer_ID'
+      strategy: 'check'
+      check_cols: ['CUSTOMER_NAME','CUSTOMER_STATE','CUSTOMER_CITY']
+      invalidate_hard_deletes: True
