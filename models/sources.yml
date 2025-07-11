@@ -6,11 +6,20 @@ sources:
     tables:
       - name: listings
         identifier: raw_listings
+        columns:
+          - name: room_type
+            tests:
+              - dbt_expectations.expert_column_distinct_count_to_equal:
+                  values: 4
+
       - name: hosts
         identifier: raw_hosts
+
       - name: reviews
         identifier: raw_reviews
+
       - name: customers
         identifier: raw_customer
+
       - name: sales
         identifier: sales_us
